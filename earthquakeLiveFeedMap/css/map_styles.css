@@ -1,0 +1,19 @@
+body { margin:0; padding:0;}
+#map {height:500px; width:100%;}
+#timeLabel{color: '#262626';}
+button {margin-bottom: 15px; margin-left: 10px; margin-right: -5px;}
+#legend{float:right; width:240px; margin-top:-20px;}
+#legendSVG{height:160px; width: 240px;}
+#clearDiv{height:1px; clear: both;}
+@media all and (max-width: 550px) {
+	#map{height: 440px;}
+}
+@media all and (max-width: 450px) {
+	#map{height: 400px;}
+}
+@media all and (max-width: 350px) {
+	#map{height: 360px;}
+}
+@media all and (max-width: 300px) {
+	#map{height: 330px;}
+}

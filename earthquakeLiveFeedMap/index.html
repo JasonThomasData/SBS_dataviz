@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>Scaled points</title>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<link href='css/leaflet.css' rel='stylesheet' />
+	<link href='css/styles.css' rel='stylesheet' />
+	<link href='css/map_styles.css' rel='stylesheet' />
+	<script src='js/vendors/leaflet.js'></script>
+	<script src="js/vendors/leaflet.ajax.min.js"></script>
+	<script src="js/vendors/moment.js"></script>
+	<!--
+	<script src="js/vendors/jquery-2.1.4.min.js"></script>
+	-->
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+</head>
+<body>
+	<h3>Earthquakes around the world in the <span id="timeLabel">past 24 hours</span></h3>
+	<h4>For earthquakes with magnitude of 4.5 or more.</h4>
+	<p>This map is an indication for the magnitudes of recent earthquakes, not the size or strength of those earthquakes. Earthquake magnitude does not equal earthquake size or strength. <br>A magnitude 9 earthquake is 100 times larger and 1000 times stronger than a magnitude 7 earthquake, which is 100 larger and 1000 times stronger than a magnitude 5 earthquake.
+	More information at the <a href="http://earthquake.usgs.gov/learn/topics/how_much_bigger.php" target="_blank">US Geological Survey</a>.</p>
+	<button id="hour">Past hour</button>
+	<button id="day">Past 24 hours</button>
+	<div id='map'></div>
+	<p>SOURCE: <a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson" target="_blank">US Geographical Survey</a> - does not include every earthquake. <span id='mapDetails'></span></p>
+	<div id='legend'>
+		<h4>Earthquake sizes (magnitude)</h4>
+		<svg id="legendSVG">
+			<circle cx="15" cy="20" r="12.833" stroke="#FF2121" stroke-width="1" fill-opacity="0.4" fill="#FF2121"></circle>
+			<text x="35" y="25">5</text>
+			<circle cx="170" cy="35" r="32.833" stroke="#FF2121" stroke-width="1" fill-opacity="0.4" fill="#FF2121"></circle>
+			<text x="211" y="40">7</text>
+			<circle cx="70" cy="95" r="59.5" stroke="#FF2121" stroke-width="1" fill-opacity="0.4" fill="#FF2121"></circle>
+			<text x="138" y="100">9</text>
+		</svg>
+	</div>
+	<div id="clearDiv"></div>
+	<script src='js/main.js'></script>
+	<script src="http://www.sbs.com.au/global/profiles/sbsdistribution/themes/global/js/thirdparty/iframeResizer.contentWindow.min.js"></script><br>
+</body>
+</html>
